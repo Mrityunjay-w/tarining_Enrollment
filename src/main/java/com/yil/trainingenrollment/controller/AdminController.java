@@ -46,7 +46,7 @@ public class AdminController {
                         HttpServletRequest request,
                         RedirectAttributes redirectAttributes) {
         // Dummy check - replace with actual authentication logic
-        if ("admin".equals(username) && "password".equals(password)) {
+        if ("admin".equals(username) && "Pass#yil12345".equals(password)) {
             // Redirect to the admin dashboard or another page
             return "redirect:/admin/dashboard";
         } else {
