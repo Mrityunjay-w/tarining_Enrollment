@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Training Enrollment</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}"/>
+    <link rel="icon" type="x-icon" href="/images/logo.jpeg">
+</head>
+<body class="bg-blue-900 flex items-center justify-center min-h-screen p-4 sm:p-6">
+
+<div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-md sm:max-w-lg">
+    <h1 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Enroll in Training</h1>
+
+    <form th:action="@{/enrollment/submit}" th:object="${enrollment}" method="post" class="space-y-4">
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name:</label>
+            <input type="text" id="name" th:field="*{name}" required
+                   class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+        </div>
+
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <input type="email" id="email" th:field="*{email}" required
+                   class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+        </div>
+
+        <div>
+            <label for="employeeId" class="block text-sm font-medium text-gray-700">Employee ID:</label>
+            <input type="text" id="employeeId" th:field="*{employeeId}" required
+                   class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+        </div>
+
+        <div>
+            <label for="company" class="block text-sm font-medium text-gray-700">Company Name:</label>
+            <input type="text" id="company" th:field="*{company}" required
+                   class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+        </div>
+
+        <div>
+            <label for="country" class="block text-sm font-medium text-gray-700">Country:</label>
+            <input type="text" id="country" th:field="*{country}" required
+                   class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"/>
+        </div>
+
+        <div>
+            <label for="trainings" class="block text-sm font-medium text-gray-700">Select Training:</label>
+            <select id="trainings" th:field="*{training}" required
+                    class="mt-1 block w-full p-2 sm:p-2.5 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option th:each="training : ${trainings}"
+                        th:value="${training.batch_code}"
+                        th:text="${training.name}">
+                </option>
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button type="submit"
+                    class="w-full bg-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                Enroll
+            </button>
+        </div>
+    </form>
+
+    <div th:if="${param.success}" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">Enrollment Done!</h2>
+            <button onclick="window.location.href='/'"
+                    class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <div th:if="${param.error}" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4">Entered Data Incorrect.</h2>
+            <button onclick="window.location.href='/enrollment/form'"
+                    class="bg-indigo-600 text-white font-bold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                OK
+            </button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

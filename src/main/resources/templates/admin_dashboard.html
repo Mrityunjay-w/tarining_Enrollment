@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}"/>
+    <link rel="icon" type="x-icon" href="/images/logo.jpeg">
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+
+
+<div class="p-4 sm:p-8">
+    <h1 class="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center text-blue-600">Admin Dashboard</h1>
+    <h2 class="text-base sm:text-lg text-center p-4 sm:p-6">Welcome, Admin!</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg">
+            <h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Manage Enrollments</h2>
+            <a href="/admin/enrollments" class="text-blue-600 hover:text-blue-800">View All Enrollments</a>
+        </div>
+
+        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg mt-4 sm:mt-0">
+            <h2 class="text-lg sm:text-xl font-semibold mb-2 sm:mb-4">Manage Training Batches</h2>
+            <a href="/admin/trainings" class="text-blue-600 hover:text-blue-800">View All Training Batches</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
