@@ -30,6 +30,7 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.war'
+          retention-days: 5
 
   deploy:
     runs-on: ubuntu-latest
