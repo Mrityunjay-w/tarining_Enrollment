@@ -53,4 +53,4 @@ This application is a web-based platform built using Java and Spring Boot that a
     Batch Constraints: The application enforces constraints on the number of employees that can enroll in certain batches.
 
 
-#### The application will be accessible at http:127.0.0.1:8080
+#### The application will be accessible at (http://localhost:8080/)
