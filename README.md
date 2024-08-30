@@ -1,4 +1,4 @@
-# Simple Java Spring-Boot Application#
+# Simple Java Spring-Boot Application
  
 This application is a web-based platform built using Java and Spring Boot that allows employees to enroll in various training batches. The application provides an admin interface to manage and view enrolled employees, training batches, and enrollment details.
  
