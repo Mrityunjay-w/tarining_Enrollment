@@ -2,9 +2,13 @@
  
 This application is a web-based platform built using Java and Spring Boot that allows employees to enroll in various training batches. The application provides an admin interface to manage and view enrolled employees, training batches, and enrollment details.
  
-### Getting Started
+### Features
+
+    User Enrollment: Employees can enroll in available training batches.
+    Admin Dashboard: Admin can view all enrolled employees and manage training batches.
+    Batch Constraints: Certain batches have limited enrollment capacity (e.g., 30 or 20 employees per batch).
  
-#### Requirements:
+#### Technologies Used
 
     Java: Version 21
     Spring Boot: Version 3.3.2
@@ -15,10 +19,10 @@ This application is a web-based platform built using Java and Spring Boot that a
     Azure DevOps: For CI/CD and deployment.
     Azure MySQL Database: For production database hosting.
     
-#### Setup and Installation process
+#### Setup and Installation Process
  
-    - Java 21 need to installed in the system
-    - It will connect to the Asure database automatically we you will run the application.
+    Java 21 needs to be installed in the system, and its environment variables should be configured.
+    It will connect to the Asure database automatically when you run the application.
  
 #### Command to run the app
 
@@ -31,8 +35,8 @@ This application is a web-based platform built using Java and Spring Boot that a
 #### Usage
 #### Access the Application
     User Interface:
-      Employees: Can access the enrollment form, select training batches, and submit their enrollments.
-      Admins: Can log in to access the admin dashboard to manage batches and view enrollments with the given Credentials.
+      Employees: Users can access the enrollment form, select training batches, and submit their enrollments..
+      Admins: Can log in to access the admin dashboard to manage batches and view enrollments with the given credentials.
 
     API Endpoints:
       Public Endpoints:
@@ -45,8 +49,8 @@ This application is a web-based platform built using Java and Spring Boot that a
 
 #### Database Schema
     The application uses the following tables:
-      batches: Stores information about training batches.
-      enrollments: Stores enrollment records linking users to batches.
+      Batches: Stores information about training batches.
+      Enrollments: Stores enrollment records linking users to batches.
 
 #### Configuration
 
