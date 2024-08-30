@@ -1,8 +1,9 @@
-# Simple Java Spring-Boot Application
- 
+# Java Spring Boot Application
+
+#### Usage
 This application is a web-based platform built using Java and Spring Boot that allows employees to enroll in various training batches. The application provides an admin interface to manage and view enrolled employees, training batches, and enrollment details.
  
-### Features
+#### Features
 
     User Enrollment: Employees can enroll in available training batches.
     Admin Dashboard: Admin can view all enrolled employees and manage training batches.
@@ -32,7 +33,6 @@ This application is a web-based platform built using Java and Spring Boot that a
     
     mvn clean install
 
-#### Usage
 #### Access the Application
     User Interface:
       Employees: Users can access the enrollment form, select training batches, and submit their enrollments..
